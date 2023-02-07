@@ -1,8 +1,9 @@
 import streamlit as st
 import openai
+import os
 
-# Configurar la API de OpenAI
-openai.api_key = "YOUR_OPENAI_API_KEY"
+# Inicializa el modelo GPT-3
+openai.api_key = os.environ.get("OPENAI_API_KEY")
 
 # Mostrar un formulario con las preguntas para el usuario
 st.title("Generador de plan de negocios")
